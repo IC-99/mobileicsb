@@ -54,8 +54,10 @@ public class MoveJoystick : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
-        player.Translate(new Vector2(0f, direction.magnitude) * speed * Time.deltaTime);
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        //player.Translate(direction * speed * Time.deltaTime);
+        rb.position = new Vector2(rb.position.x + direction.x * speed * Time.deltaTime, rb.position.y + direction.y * speed * Time.deltaTime);
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        //rb.rotation = angle;
+        
     }
 }

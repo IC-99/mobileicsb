@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - MoveJoystick
     - MoveJoystickIsUsing
+    - ShootJoystick
+    - ShootJoystickIsUsing
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -72,6 +74,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3480}
     - Class: 114
       Script: {instanceID: 4394}
+    - Class: 114
+      Script: {instanceID: 21340}
+    - Class: 114
+      Script: {instanceID: 21440}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -617,7 +623,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 562ca269d5a103bbf4e1f2e46a1dcb7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShootJoystickIsUsing
+  - hash:
+      serializedVersion: 2
+      Hash: 87d33e003dba6e52e8aacb918cc7e5c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShootJoystick
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Ivan/Documents/Drive/Mobile-ICSB.apk
+  playerPath: C:/Users/Ivan/Documents/Drive/Mobile-ICSB1.1.apk
