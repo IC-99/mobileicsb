@@ -54,9 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MoveJoystick.cs" />
-    <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
     <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
+    <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
     <Compile Include="Assets\Scripts\ShootJoystick.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
