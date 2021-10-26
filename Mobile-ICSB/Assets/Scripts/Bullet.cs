@@ -6,11 +6,12 @@ public class Bullet : MonoBehaviour
 {
 
     public GameObject hitEffect;
+    //public CameraShake cameraShake;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject,0.3f);
+        Destroy(gameObject,0.5f);
     }
 
     // Update is called once per frame
@@ -26,14 +27,14 @@ public class Bullet : MonoBehaviour
 
     void explode()
     {
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 2f);
         Destroy(gameObject);
     }
 
     public void OnDestroy()
     {
-        explode();
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 2f);
+        //cameraShake.shaking();
     }
 
 }

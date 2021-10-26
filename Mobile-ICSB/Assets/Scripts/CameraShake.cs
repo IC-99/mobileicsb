@@ -13,12 +13,12 @@ public class CameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(shake(0.15f, 0.1f));
-        }
-        */
+        
+    }
+
+    public void shaking()
+    {
+        StartCoroutine(shake(0.15f, 0.1f));
     }
 
     public IEnumerator shake(float duration, float magnitude)
