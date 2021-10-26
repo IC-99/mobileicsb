@@ -11,7 +11,7 @@ public class ShootJoystick : MonoBehaviour
 
     protected bool isShooting;
 
-    public float bulletForce = 20f;
+    public float bulletForce = 80f;
 
     public Transform player;
     private bool touchStart = false;
@@ -55,7 +55,7 @@ public class ShootJoystick : MonoBehaviour
             Vector2 direction = Vector2.ClampMagnitude(offset / 1500, 0.1f);
             rotateCharacter(direction);
 
-            shootKnob.position = new Vector2(shootOuter.position.x + direction.x, shootOuter.position.y + direction.y);
+            shootKnob.position = new Vector2(shootOuter.position.x + direction.x * 10, shootOuter.position.y + direction.y * 10);
         }
 
         if (touchStart)

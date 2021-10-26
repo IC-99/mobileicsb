@@ -7,7 +7,7 @@ public class MoveJoystick : MonoBehaviour
     public MoveJoystickIsUsing isUsing;
 
     public Transform player;
-    public float speed = 20.0f;
+    public float speed = 200.0f;
     private bool touchStart = false;
 
     private Vector2 pointA;
@@ -48,7 +48,7 @@ public class MoveJoystick : MonoBehaviour
             Vector2 offset = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - pointA;
             Vector2 direction = Vector2.ClampMagnitude(offset / 1500, 0.1f);
             moveCharacter(direction);
-            moveKnob.position = new Vector2(moveOuter.position.x + direction.x, moveOuter.position.y + direction.y) ;
+            moveKnob.position = new Vector2(moveOuter.position.x + direction.x * 10, moveOuter.position.y + direction.y * 10) ;
         }
 
     }
