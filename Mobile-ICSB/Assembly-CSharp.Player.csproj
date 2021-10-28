@@ -56,10 +56,11 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\MoveJoystick.cs" />
     <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
-    <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
-    <Compile Include="Assets\Scripts\ShootJoystick.cs" />
-    <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
+    <Compile Include="Assets\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\ShootJoystick.cs" />
+    <Compile Include="Assets\Scripts\Box.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -23,6 +23,8 @@ public class ShootJoystick : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public float frequency = 0.4f;
+
 
     void Start()
     {
@@ -62,7 +64,7 @@ public class ShootJoystick : MonoBehaviour
         {
             if (!isShooting)
             {
-                StartCoroutine(shooting(0.4f));
+                StartCoroutine(shooting(frequency));
             }
 
         }
