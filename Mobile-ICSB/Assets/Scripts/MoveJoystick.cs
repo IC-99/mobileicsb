@@ -10,12 +10,15 @@ public class MoveJoystick : MonoBehaviour
     public float speed = 200.0f;
     private bool touchStart = false;
 
-    private Vector2 pointA;
+    private Vector3 pointA;
 
     public RectTransform moveKnob;
     public RectTransform moveOuter;
 
     public Rigidbody2D rb;
+
+    public bool inuso = false;
+    public Touch touch;
 
 
     void Start()
@@ -26,26 +29,47 @@ public class MoveJoystick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.touchCount == 1)
         {
-            pointA = Input.mousePosition;
+            touch = Input.GetTouch(0);
+            if (!inuso)
+            {
+                pointA = touch.position;
+                inuso = true;
+            }
         }
+
+        if (Input.touchCount == 2)
+        {
+
+            touch = touchSinistro(Input.GetTouch(0), Input.GetTouch(1));
+            if (!inuso)
+            {
+                pointA = touch.position;
+                inuso = true;
+            }
+        }
+
+
+
         if (isUsing.Pressed)
         {
             touchStart = true;
         }
         else
         {
+            inuso = false;
             touchStart = false;
             moveKnob.position = moveOuter.position;
         }
-
     }
+    
+
     private void FixedUpdate()
     {
         if (touchStart)
         {
-            Vector2 offset = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - pointA;
+            Vector2 offset = new Vector3(touch.position.x, touch.position.y, 0) - pointA;
             Vector2 direction = Vector2.ClampMagnitude(offset / 1500, 0.1f);
             moveCharacter(direction);
             moveKnob.position = new Vector2(moveOuter.position.x + direction.x * 10, moveOuter.position.y + direction.y * 10) ;
@@ -59,5 +83,15 @@ public class MoveJoystick : MonoBehaviour
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         //rb.rotation = angle;
         
+    }
+
+    public Touch touchSinistro(Touch t1, Touch t2)
+    {
+        if(t1.position.x < t2.position.x)
+        {
+            return t1;
+        }
+        return t2;
+
     }
 }

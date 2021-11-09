@@ -6,18 +6,31 @@ public class Bullet : MonoBehaviour
 {
 
     public GameObject hitEffect;
+    public int damage = 20;
+
+
     //public CameraShake cameraShake;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject,0.5f);
+        Destroy(gameObject,0.8f);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void setDamage(int damage)
+    {
+        this.damage = damage;
+    }
+
+    public int getDamage()
+    {
+        return this.damage;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
