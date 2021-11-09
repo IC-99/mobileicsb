@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.collider.CompareTag("Bullet"))
         {
-            takeDamage(20);
+            takeDamage(collision.collider.GetComponent<Bullet>().getDamage());
         }
     }
 

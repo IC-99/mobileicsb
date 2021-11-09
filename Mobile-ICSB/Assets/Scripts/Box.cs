@@ -6,6 +6,7 @@ public class Box : MonoBehaviour
 {
     private int state = 3;
     public GameObject boxExplosion;
+    public GameObject powerUpDannoAumentato;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class Box : MonoBehaviour
             if(state == 0)
             {
                 GameObject effect = Instantiate(boxExplosion, transform.position, Quaternion.identity);
+                Instantiate(powerUpDannoAumentato, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 Destroy(effect, 2f);
             }

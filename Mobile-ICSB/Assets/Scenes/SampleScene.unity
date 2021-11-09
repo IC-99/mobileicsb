@@ -692,7 +692,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 789247888}
@@ -863,7 +863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789247887}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1549063, y: -1.5540905, z: -16.634527}
+  m_LocalPosition: {x: 17.3, y: 8.9, z: -16.634527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 519420032}
@@ -2138,6 +2138,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7231818100332075660, guid: 506fd4d6764846b40a8f9bb872da1215, type: 3}
+      propertyPath: powerUpDannoAumentato
+      value: 
+      objectReference: {fileID: 4597963101486724178, guid: cf2c653849b7057498d87ef9080c145d, type: 3}
     - target: {fileID: 7231818100332075663, guid: 506fd4d6764846b40a8f9bb872da1215, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2400,7 +2404,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1473510314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d38daaabb9333d40ab446f9a3214fd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b3af33151a64724cbf623ea3f44d218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Pressed: 0
@@ -2981,7 +2985,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1830657182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7784ca45fe6aa1549927a979b1c9a515, type: 3}
+  m_Script: {fileID: 11500000, guid: f5ef91f6997be224da4d532b0d88084b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Pressed: 0
@@ -3356,6 +3360,7 @@ GameObject:
   - component: {fileID: 2124090955}
   - component: {fileID: 2124090960}
   - component: {fileID: 2124090961}
+  - component: {fileID: 2124090957}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3372,7 +3377,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2124090954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c375aeb74cfb84b8f6e7be832cf4ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 20338f7a9ed05fc43af52649b2c2ad4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isUsing: {fileID: 1473510318}
@@ -3394,14 +3399,29 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 10
+  m_AngularDrag: 10
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2124090957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124090954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c67e8213f81f44a940155ed77ca9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dannoAumentato: 0
+  freqAumentata: 0
+  triploProiettile: 0
 --- !u!212 &2124090958
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3461,7 +3481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124090954}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 17.3, y: 8.9, z: 0}
+  m_LocalPosition: {x: -10.3, y: 10.9, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 625876046}
@@ -3477,18 +3497,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2124090954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5adb161b5ec10b458f27b4c34c166a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 62f623a5669a9a34ebe40bfe9628d999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isUsing: {fileID: 1830657184}
   firePoint: {fileID: 625876046}
   bulletPrefab: {fileID: 2161410584358840758, guid: 2e39320bb0f16c24081fc5456179b66e, type: 3}
-  bulletForce: 0.8
+  bulletForce: 0.5
   player: {fileID: 2124090959}
   shootKnob: {fileID: 1830657183}
   shootOuter: {fileID: 836388447}
   rb: {fileID: 2124090956}
-  frequency: 0.4
+  frequency: 0.2
+  powerUps: {fileID: 2124090957}
 --- !u!58 &2124090961
 CircleCollider2D:
   m_ObjectHideFlags: 0
