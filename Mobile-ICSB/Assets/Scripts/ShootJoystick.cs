@@ -30,6 +30,8 @@ public class ShootJoystick : MonoBehaviour
 
     public PlayerPowerUp powerUps;
 
+    public AudioSource ShootSound;
+
 
     void Start()
     {
@@ -118,6 +120,7 @@ public class ShootJoystick : MonoBehaviour
         }
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        this.ShootSound.Play();
     }
 
     public IEnumerator shooting(float time)
@@ -131,6 +134,7 @@ public class ShootJoystick : MonoBehaviour
         isShooting = false;
         
     }
+
 
 
 }

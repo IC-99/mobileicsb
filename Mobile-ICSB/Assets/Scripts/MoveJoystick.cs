@@ -17,8 +17,9 @@ public class MoveJoystick : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public bool inuso = false;
-    public Touch touch;
+    private bool inuso = false;
+    private Touch touch;
+
 
 
     void Start()
@@ -78,11 +79,7 @@ public class MoveJoystick : MonoBehaviour
     }
     void moveCharacter(Vector2 direction)
     {
-        //player.Translate(direction * speed * Time.deltaTime);
         rb.position = new Vector2(rb.position.x + direction.x * speed * Time.deltaTime, rb.position.y + direction.y * speed * Time.deltaTime);
-        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-        //rb.rotation = angle;
-        
     }
 
     public Touch touchSinistro(Touch t1, Touch t2)
@@ -94,4 +91,10 @@ public class MoveJoystick : MonoBehaviour
         return t2;
 
     }
+
+    public bool isMoving()
+    {
+        return this.inuso;
+    }
+
 }
