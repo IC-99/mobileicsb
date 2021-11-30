@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class PlayerPowerUp : MonoBehaviour
 {
-    public bool dannoAumentato = false;
-    public bool freqAumentata = false;
-    public bool triploProiettile = false;
+
+    public PlayerHealth playerHealth;
+    public AudioSource dannoAumentatoSound;
+    public Timer dannoAumentatoTimer;
+    public Timer triploProiettileTimer;
+    public AudioSource curaSound;
+    
+    private bool dannoAumentato = false;
+    private bool freqAumentata = false;
+    private bool triploProiettile = false;
 
     public bool getDannoAumentato()
     {
         return this.dannoAumentato;
+    }
+
+    public void setDannoAumentato(bool b)
+    {
+        this.dannoAumentato = b;
     }
 
     public bool getFreqAumentata()
@@ -18,9 +30,19 @@ public class PlayerPowerUp : MonoBehaviour
         return this.freqAumentata;
     }
 
-    public bool getDoppioProiettile()
+    public void setFreqAumentata(bool b)
+    {
+        this.freqAumentata = b;   
+    }
+
+    public bool getTriploProiettile()
     {
         return this.triploProiettile;
+    }
+
+    public void setTriploProiettile(bool b)
+    {
+        this.triploProiettile = b;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -28,18 +50,24 @@ public class PlayerPowerUp : MonoBehaviour
         if (collision.collider.CompareTag("PowerUpDannoAumentato"))
         {
             this.dannoAumentato = true;
+            this.dannoAumentatoTimer.startTimer(10f, "DannoAumentato");
+            this.dannoAumentatoSound.Play();
             Destroy(collision.gameObject);
         }
-    }
 
-    void Start()
-    {
-        
-    }
+        if (collision.collider.CompareTag("PowerUpCura"))
+        {
+            playerHealth.cura(20);
+            this.curaSound.Play();
+            Destroy(collision.gameObject);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.collider.CompareTag("PowerUpTriploProiettile"))
+        {
+            this.triploProiettile = true;
+            this.triploProiettileTimer.startTimer(10f, "TriploProiettile");
+            //this.triploProiettileSound.Play();
+            Destroy(collision.gameObject);
+        }
     }
 }

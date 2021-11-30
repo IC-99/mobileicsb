@@ -35,7 +35,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        explode();
+        if (!(collision.collider.CompareTag("Bullet")) && !(collision.collider.CompareTag("Player")))
+        {
+            explode();
+        }
     }
 
     void explode()

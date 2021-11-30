@@ -111,16 +111,53 @@ public class ShootJoystick : MonoBehaviour
 
     }
 
-    void shoot()
+    void shootSingolo()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        if (this.powerUps.getDannoAumentato())
-        {
-            bullet.GetComponent<Bullet>().setDamage(40);
-        }
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            if (this.powerUps.getDannoAumentato())
+            {
+                Bullet b = bullet.GetComponent<Bullet>();
+                b.setDamage(b.getDamage() * 2);
+            }
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        
+          
         this.ShootSound.Play();
+    }
+
+    public IEnumerator shootTriplo()
+    {
+
+    GameObject b1 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    Rigidbody2D rb1 = b1.GetComponent<Rigidbody2D>();
+    rb1.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+
+    yield return new WaitForSeconds(0.02f);
+
+    GameObject b2 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    Rigidbody2D rb2 = b2.GetComponent<Rigidbody2D>();
+    rb2.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+
+    yield return new WaitForSeconds(0.02f);
+
+    GameObject b3 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    Rigidbody2D rb3 = b3.GetComponent<Rigidbody2D>();
+    rb3.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+
+    if (this.powerUps.getDannoAumentato())
+    {
+        Bullet bullet1 = b1.GetComponent<Bullet>();
+        bullet1.setDamage(bullet1.getDamage() * 2);
+        Bullet bullet2 = b1.GetComponent<Bullet>();
+        bullet1.setDamage(bullet2.getDamage() * 2);
+        Bullet bullet3 = b1.GetComponent<Bullet>();
+        bullet1.setDamage(bullet3.getDamage() * 2);
+    }
+
+    this.ShootSound.Play();
+
     }
 
     public IEnumerator shooting(float time)
@@ -128,13 +165,21 @@ public class ShootJoystick : MonoBehaviour
         //Instantiate your projectile
         isShooting = true;
         yield return new WaitForSeconds(0.1f);
-        shoot();
+        if (!this.powerUps.getTriploProiettile())
+        {
+            shootSingolo();
+        }
+        else
+        {
+            StartCoroutine(shootTriplo());
+        }
         //wait for some time
         yield return new WaitForSeconds(time);
         isShooting = false;
         
     }
 
+    
 
 
 }

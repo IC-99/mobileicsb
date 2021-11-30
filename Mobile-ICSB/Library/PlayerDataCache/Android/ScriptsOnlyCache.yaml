@@ -7,12 +7,16 @@ ScriptsOnlyBuild:
     - CameraShake
     - EnemyGFX
     - EnemyHealth
+    - FootSteps
     - HealthBar
     - MoveJoystick
     - MoveJoystickIsUsing
+    - PlayMusic
+    - PlayerHealth
     - PlayerPowerUp
     - ShootJoystick
     - ShootJoystickIsUsing
+    - Timer
     AstarPathfindingProject.dll:
     - AstarPath
     - Pathfinding.AIDestinationSetter
@@ -76,6 +80,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -85,47 +93,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1526}
     - Class: 114
-      Script: {instanceID: 1722}
+      Script: {instanceID: 1656}
     - Class: 114
-      Script: {instanceID: 1920}
+      Script: {instanceID: 1724}
     - Class: 114
-      Script: {instanceID: 2586}
+      Script: {instanceID: 1922}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 2446}
     - Class: 114
-      Script: {instanceID: 2704}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2622}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2708}
     - Class: 114
-      Script: {instanceID: 2956}
+      Script: {instanceID: 2828}
     - Class: 114
-      Script: {instanceID: 2974}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 3118}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 3384}
+      Script: {instanceID: 2978}
     - Class: 114
-      Script: {instanceID: 4068}
+      Script: {instanceID: 3122}
     - Class: 114
-      Script: {instanceID: 4940}
+      Script: {instanceID: 3352}
     - Class: 114
-      Script: {instanceID: 5190}
+      Script: {instanceID: 3390}
     - Class: 114
-      Script: {instanceID: 5308}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 5628}
+      Script: {instanceID: 4056}
     - Class: 114
-      Script: {instanceID: 5786}
+      Script: {instanceID: 4078}
     - Class: 114
-      Script: {instanceID: 22852}
+      Script: {instanceID: 4216}
     - Class: 114
-      Script: {instanceID: 22854}
+      Script: {instanceID: 4394}
     - Class: 114
-      Script: {instanceID: 22856}
+      Script: {instanceID: 4884}
     - Class: 114
-      Script: {instanceID: 22858}
+      Script: {instanceID: 4956}
+    - Class: 114
+      Script: {instanceID: 5206}
+    - Class: 114
+      Script: {instanceID: 5324}
+    - Class: 114
+      Script: {instanceID: 5644}
+    - Class: 114
+      Script: {instanceID: 5802}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -197,6 +213,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: 4bbb4126c2e6c94280f10e0e65dd3d5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Timer
   - hash:
       serializedVersion: 2
       Hash: 59ce5902048c1041729c804e2772b2ce
@@ -313,6 +335,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: f401ca1d47016f7a14ed784063d9036c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShootJoystick
+  - hash:
+      serializedVersion: 2
       Hash: cfdd0010efd7b54c2b7512656dbc9119
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
@@ -325,13 +353,13 @@ ScriptsOnlyBuild:
     className: DynamicGridObstacle
   - hash:
       serializedVersion: 2
-      Hash: 7d5fc89bd44f42748ce19ec114e506f8
+      Hash: 8acd70f55cc505a0d421cbb78510ead1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerPowerUp
   - hash:
       serializedVersion: 2
-      Hash: 66902bac74f0bdc399d7298a5cfd7107
+      Hash: a3f2f730c6b0d49c560001034f3851bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Box
@@ -499,6 +527,12 @@ ScriptsOnlyBuild:
     className: NodeLink
   - hash:
       serializedVersion: 2
+      Hash: 244e830b32e81ff6d12e1f1edac94e2e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FootSteps
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -509,6 +543,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 562ca269d5a103bbf4e1f2e46a1dcb7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShootJoystickIsUsing
   - hash:
       serializedVersion: 2
       Hash: 5dea360fb0b147724ac344e6f399c2f3
@@ -589,6 +629,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 442a61cbbee72a49c3cff04b4f08ad63
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayMusic
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -637,6 +683,12 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 562ca269d5a103bbf4e1f2e46a1dcb7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveJoystickIsUsing
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -671,6 +723,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6f2c268f33ce096ae18d1cf621f825e3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveJoystick
   - hash:
       serializedVersion: 2
       Hash: 0edeba255bdbade25edc357f1412ba38
@@ -749,6 +807,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71678199da2ea4bf55d6c5c43971fe8c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHealth
   - hash:
       serializedVersion: 2
       Hash: ef5c43f921427d03730f6ea4c848f07d
@@ -893,31 +957,7 @@ ScriptsOnlyBuild:
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
     className: SingleNodeBlocker
-  - hash:
-      serializedVersion: 2
-      Hash: 562ca269d5a103bbf4e1f2e46a1dcb7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MoveJoystickIsUsing
-  - hash:
-      serializedVersion: 2
-      Hash: 1aba0b175beba7086b5d11751fbdb9fc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ShootJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: c4ae37ac8e51cf5a56df54b363e0069d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MoveJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: 562ca269d5a103bbf4e1f2e46a1dcb7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ShootJoystickIsUsing
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Ivan/Documents/Drive/Mobile-ICSB1.4.apk
+  playerPath: "C:/Users/Ivan/Documents/Drive/Universit\xE0/Mobile Computing/Mobile-ICSB1.7.apk"
