@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7341192131956399590}
   - component: {fileID: 5101092579588471891}
   - component: {fileID: 5257772782846013672}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PowerUpTriploProiettile
   m_TagString: PowerUpTriploProiettile
   m_Icon: {fileID: 0}

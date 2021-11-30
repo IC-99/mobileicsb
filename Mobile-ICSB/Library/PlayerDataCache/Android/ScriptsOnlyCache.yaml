@@ -960,4 +960,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/Ivan/Documents/Drive/Universit\xE0/Mobile Computing/Mobile-ICSB1.7.apk"
+  playerPath: "C:/Users/Ivan/Documents/Drive/Universit\xE0/Mobile Computing/Mobile-ICSB1.8.apk"

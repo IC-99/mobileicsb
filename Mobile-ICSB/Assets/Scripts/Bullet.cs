@@ -33,15 +33,18 @@ public class Bullet : MonoBehaviour
         return this.damage;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+private void OnCollisionEnter2D(Collision2D collision)
+{
+   
+    if (!collision.collider.CompareTag("Bullet") && !collision.collider.CompareTag("Player"))
     {
-        if (!(collision.collider.CompareTag("Bullet")) && !(collision.collider.CompareTag("Player")))
-        {
-            explode();
-        }
+        explode();
     }
+    
+}
 
-    void explode()
+
+void explode()
     {
         Destroy(gameObject);
     }
