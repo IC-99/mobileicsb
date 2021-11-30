@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1858972423305523211}
   - component: {fileID: 525036197457034076}
   - component: {fileID: 3584846972739198528}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PowerUpCura
   m_TagString: PowerUpCura
   m_Icon: {fileID: 0}

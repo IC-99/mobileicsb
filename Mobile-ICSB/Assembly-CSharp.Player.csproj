@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\ShootJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerPowerUp.cs" />
     <Compile Include="Assets\Scripts\Box.cs" />
@@ -68,7 +69,6 @@
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
-    <Compile Include="Assets\Scripts\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

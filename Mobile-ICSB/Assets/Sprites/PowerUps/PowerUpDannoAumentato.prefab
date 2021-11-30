@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5784232627798047815}
   - component: {fileID: 23023808568926964}
   - component: {fileID: 6223963333752023397}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PowerUpDannoAumentato
   m_TagString: PowerUpDannoAumentato
   m_Icon: {fileID: 0}
