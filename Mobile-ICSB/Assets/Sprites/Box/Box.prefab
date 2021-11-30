@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7231818100332075659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8, y: -4, z: 0}
-  m_LocalScale: {x: 13, y: 13, z: 13}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -146,6 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxExplosion: {fileID: 3573636653074441995, guid: 76ac96f6095abfb4c8dd0a4b24fb0109, type: 3}
+  powerUpDannoAumentato: {fileID: 4597963101486724178, guid: cf2c653849b7057498d87ef9080c145d, type: 3}
+  powerUpCura: {fileID: 7324855818028877328, guid: f957927b0190ec447acc0147c53c9fea, type: 3}
+  powerUpTriploProiettile: {fileID: 626400491572048898, guid: 7e12b18d3a1607043a7de8cb5de7d107, type: 3}
 --- !u!95 &7231818100332075661
 Animator:
   serializedVersion: 3

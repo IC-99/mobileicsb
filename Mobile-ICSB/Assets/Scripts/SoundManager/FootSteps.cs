@@ -10,7 +10,6 @@ public class FootSteps : MonoBehaviour
     public AudioSource passo3;
     public AudioSource passo4;
     public AudioSource passo5;
-    private bool inizio = false;
     private AudioSource[] passi;
 
     // Start is called before the first frame update
