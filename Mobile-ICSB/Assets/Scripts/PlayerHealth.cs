@@ -30,6 +30,11 @@ public class PlayerHealth : MonoBehaviour
         {
             //takeDamage(collision.collider.GetComponent<EnemyBullet>().getDamage());
         }
+
+        if (collision.collider.CompareTag("EnemyStella"))
+        {
+            takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
+        }
     }
 
     public void cura(int valoreCura)

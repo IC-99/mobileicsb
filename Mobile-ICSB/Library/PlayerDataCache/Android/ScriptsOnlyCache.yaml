@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - CameraShake
     - EnemyGFX
     - EnemyHealth
+    - EnemySella
     - FootSteps
     - HealthBar
     - MoveJoystick
@@ -142,6 +143,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5644}
     - Class: 114
       Script: {instanceID: 5802}
+    - Class: 114
+      Script: {instanceID: 23590}
+    - Class: 114
+      Script: {instanceID: 26820}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -957,7 +962,13 @@ ScriptsOnlyBuild:
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
     className: SingleNodeBlocker
+  - hash:
+      serializedVersion: 2
+      Hash: 5e2f762891c387724fd0b35a4bb4bd55
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemySella
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/Ivan/Documents/Drive/Universit\xE0/Mobile Computing/Mobile-ICSB1.8.apk"
+  playerPath: "C:/Users/Ivan/Documents/Drive/Universit\xE0/Mobile Computing/Mobile-ICSB0.9.apk"

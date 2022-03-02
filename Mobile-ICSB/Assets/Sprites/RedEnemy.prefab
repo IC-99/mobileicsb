@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 8571634238157236662}
   - component: {fileID: 8571634238157236657}
   - component: {fileID: 8571634238157236658}
+  - component: {fileID: -1228677097100566806}
   m_Layer: 0
   m_Name: RedEnemy
   m_TagString: Untagged
@@ -603,6 +604,18 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   healthBar: {fileID: 8571634237807135640}
+--- !u!114 &-1228677097100566806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8571634238157236667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0d934d8c7d69e41a3108f642405adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8571634238690061847
 GameObject:
   m_ObjectHideFlags: 0
