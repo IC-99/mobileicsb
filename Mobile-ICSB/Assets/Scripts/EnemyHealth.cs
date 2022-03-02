@@ -28,11 +28,17 @@ public class EnemyHealth : MonoBehaviour
         {
             takeDamage(collision.collider.GetComponent<Bullet>().getDamage());
         }
+
+        if (collision.collider.CompareTag("EnemyStella"))
+        {
+            takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
+        }
     }
 
     void takeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.setHealth(currentHealth);
+        if(currentHealth <= 0) Destroy(gameObject);
     }
 }

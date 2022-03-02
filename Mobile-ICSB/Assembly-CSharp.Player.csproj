@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
+    <Compile Include="Assets\Scripts\EnemySella.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
