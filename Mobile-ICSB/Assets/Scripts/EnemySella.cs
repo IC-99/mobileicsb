@@ -22,7 +22,7 @@ public class EnemySella : MonoBehaviour
     {
         if (this.attivo)
         {
-            rb.rotation = rb.rotation + 4f;
+            this.rb.rotation += 4f;
         }
     }
 
