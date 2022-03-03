@@ -61,15 +61,15 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\SoundManager\FootSteps.cs" />
     <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
+    <Compile Include="Assets\Scripts\EnemySella.cs" />
     <Compile Include="Assets\Scripts\PlayMusic.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
     <Compile Include="Assets\Scripts\MoveJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
-    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\RedEnemy.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
-    <Compile Include="Assets\Scripts\EnemySella.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

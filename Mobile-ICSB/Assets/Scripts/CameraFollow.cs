@@ -36,7 +36,7 @@ public class CameraFollow : MonoBehaviour
         if (smoothedPosition.y < -104f) this.y = -104f;
         else
         {
-            if (smoothedPosition.y > 46f) this.y = 46f;
+            if (smoothedPosition.y > 43f) this.y = 43f;
             else this.y = smoothedPosition.y;
         }
 

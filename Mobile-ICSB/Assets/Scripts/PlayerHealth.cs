@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
     {
         //currentHealth = maxHealth;
         this.healthBar.setMaxHealth(this.maxHealth);
-        this.currentHealth = 50;
+        this.currentHealth = 100;
         this.healthBar.setHealth(currentHealth);
     }
 
