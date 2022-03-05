@@ -11,7 +11,13 @@ public class RedEnemy : MonoBehaviour
     public SpriteRenderer sr;
     private float opacity;
 
+    public GameObject healtBarUI;
     public HealthBar healthBar;
+
+    public GameObject bulletPrefab;
+    protected bool isShooting = false;
+    public Transform player;
+    private Vector2 direzioneSparo;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +27,7 @@ public class RedEnemy : MonoBehaviour
         this.isDying = false;
         this.rb = this.GetComponent<Rigidbody2D>();
         this.opacity = 1f;
+        this.isShooting = false;
     }
 
     // Update is called once per frame
@@ -31,6 +38,11 @@ public class RedEnemy : MonoBehaviour
             this.rb.rotation += 10f;
             this.sr.color = new Color(1f, 1f, 1f, opacity);
             opacity -= 0.03f;
+        }
+
+        if (!isShooting)
+        {
+            StartCoroutine(shooting(1f));
         }
     }
 
@@ -56,9 +68,31 @@ public class RedEnemy : MonoBehaviour
 
     private void death()
     {
-        this.healthBar.GetComponent<RectTransform>().localScale = new Vector3(0f, 0f, 0f);
+        this.healtBarUI.SetActive(false);
         this.GetComponent<Collider2D>().enabled = false;
         this.isDying = true;
         Destroy(gameObject, 1f);
+    }
+
+
+    void shootSingolo()
+    {
+        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - this.rb.position;
+        this.direzioneSparo = Vector2.ClampMagnitude(this.direzioneSparo, 1f);
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(this.direzioneSparo * 0.5f, ForceMode2D.Impulse);
+
+        //this.ShootSound.Play();
+    }
+
+    public IEnumerator shooting(float time)
+    {
+        isShooting = true;
+        yield return new WaitForSeconds(0.1f);
+        shootSingolo();
+        //wait for some time
+        yield return new WaitForSeconds(time);
+        isShooting = false;
     }
 }

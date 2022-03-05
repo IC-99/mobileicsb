@@ -9,6 +9,7 @@ TagManager:
   - PowerUpCura
   - PowerUpTriploProiettile
   - EnemyStella
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -17,12 +18,12 @@ TagManager:
   - Water
   - UI
   - Ostacoli
-  - 
+  - Player
   - Bullet
   - 
   - BulletIgnore
-  - 
-  - 
+  - Nemici
+  - BulletNemici
   - 
   - 
   - 

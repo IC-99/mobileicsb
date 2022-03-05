@@ -26,15 +26,16 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Bullet"))
+        if (collision.collider.CompareTag("EnemyBullet"))
         {
-            //takeDamage(collision.collider.GetComponent<EnemyBullet>().getDamage());
+            takeDamage(collision.collider.GetComponent<EnemyBullet>().getDamage());
         }
 
         if (collision.collider.CompareTag("EnemyStella"))
         {
             takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
         }
+
     }
 
     public void cura(int valoreCura)

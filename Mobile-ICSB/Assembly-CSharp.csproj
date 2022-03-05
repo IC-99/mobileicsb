@@ -69,8 +69,10 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\RedEnemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyGFX.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\EnemyGFX.cs" />
+    <Compile Include="Assets\Scripts\SparaNemico.cs" />
+    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
