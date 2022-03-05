@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(this.currentHealth <= 0) SceneManager.LoadScene("SampleScene");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
