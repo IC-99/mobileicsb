@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerImage: {fileID: 16262104}
   powerUpIcon: {fileID: 245033423}
-  powerUpManager: {fileID: 0}
+  powerUpManager: {fileID: 962416781}
   duration: 0
 --- !u!114 &16262104
 MonoBehaviour:
@@ -1665,7 +1665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622114604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.17, y: -102.09, z: 0}
+  m_LocalPosition: {x: 38.1, y: -92.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1373236687}
@@ -2579,6 +2579,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 506fd4d6764846b40a8f9bb872da1215, type: 3}
+--- !u!114 &962416781 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3348227870494140121, guid: 87517021121c08b4daa13f3bd2780c4c, type: 3}
+  m_PrefabInstance: {fileID: 2636387240655961307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c67e8213f81f44a940155ed77ca9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1012279343
 GameObject:
   m_ObjectHideFlags: 0
@@ -5195,7 +5206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerImage: {fileID: 1614841977}
   powerUpIcon: {fileID: 1297296471}
-  powerUpManager: {fileID: 0}
+  powerUpManager: {fileID: 962416781}
   duration: 0
 --- !u!1 &1631379236
 GameObject:

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2064277121}
   m_Layer: 12
   m_Name: BulletNemico
-  m_TagString: BulletNemico
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

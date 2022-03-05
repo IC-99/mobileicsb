@@ -40,7 +40,7 @@ public class RedEnemy : MonoBehaviour
             opacity -= 0.03f;
         }
 
-        if (!isShooting)
+        if (!isShooting && !isDying)
         {
             StartCoroutine(shooting(1f));
         }
