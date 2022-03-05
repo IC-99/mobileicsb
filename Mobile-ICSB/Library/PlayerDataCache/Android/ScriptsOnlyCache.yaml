@@ -5,18 +5,21 @@ ScriptsOnlyBuild:
     - Bullet
     - CameraFollow
     - CameraShake
+    - EnemyBullet
     - EnemyGFX
-    - EnemyHealth
     - EnemySella
     - FootSteps
     - HealthBar
     - MoveJoystick
     - MoveJoystickIsUsing
+    - PauseMenu
     - PlayMusic
     - PlayerHealth
     - PlayerPowerUp
+    - RedEnemy
     - ShootJoystick
     - ShootJoystickIsUsing
+    - SparaNemico
     - Timer
     AstarPathfindingProject.dll:
     - AstarPath
@@ -40,6 +43,11 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -53,10 +61,13 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -70,6 +81,8 @@ ScriptsOnlyBuild:
     - Class: 28
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
@@ -92,62 +105,82 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1526}
+      Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 1656}
+      Script: {instanceID: 1682}
     - Class: 114
-      Script: {instanceID: 1724}
+      Script: {instanceID: 1750}
     - Class: 114
-      Script: {instanceID: 1922}
+      Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 1874}
     - Class: 114
-      Script: {instanceID: 2590}
+      Script: {instanceID: 1948}
     - Class: 114
-      Script: {instanceID: 2622}
+      Script: {instanceID: 2282}
     - Class: 114
-      Script: {instanceID: 2708}
+      Script: {instanceID: 2292}
     - Class: 114
-      Script: {instanceID: 2828}
+      Script: {instanceID: 2472}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2616}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2648}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 3390}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 3406}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 4056}
+      Script: {instanceID: 3006}
     - Class: 114
-      Script: {instanceID: 4078}
+      Script: {instanceID: 3150}
     - Class: 114
-      Script: {instanceID: 4216}
+      Script: {instanceID: 3380}
     - Class: 114
-      Script: {instanceID: 4394}
+      Script: {instanceID: 3418}
     - Class: 114
-      Script: {instanceID: 4884}
+      Script: {instanceID: 3434}
     - Class: 114
-      Script: {instanceID: 4956}
+      Script: {instanceID: 3540}
     - Class: 114
-      Script: {instanceID: 5206}
+      Script: {instanceID: 3676}
     - Class: 114
-      Script: {instanceID: 5324}
+      Script: {instanceID: 3870}
     - Class: 114
-      Script: {instanceID: 5644}
+      Script: {instanceID: 4088}
     - Class: 114
-      Script: {instanceID: 5802}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 23590}
+      Script: {instanceID: 4248}
     - Class: 114
-      Script: {instanceID: 26820}
+      Script: {instanceID: 4426}
+    - Class: 114
+      Script: {instanceID: 4916}
+    - Class: 114
+      Script: {instanceID: 4950}
+    - Class: 114
+      Script: {instanceID: 4988}
+    - Class: 114
+      Script: {instanceID: 5238}
+    - Class: 114
+      Script: {instanceID: 5344}
+    - Class: 114
+      Script: {instanceID: 5356}
+    - Class: 114
+      Script: {instanceID: 5628}
+    - Class: 114
+      Script: {instanceID: 5678}
+    - Class: 114
+      Script: {instanceID: 5836}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -424,6 +457,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: d7a0f74fbdcaf33f6cb29d30447454af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyBullet
+  - hash:
+      serializedVersion: 2
       Hash: a74405a4829a834d107a0c6e072719ed
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -598,6 +637,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: ca57bab0e9024dc4a580a1b1f92353f8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemySella
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -608,6 +653,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SparaNemico
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -886,10 +937,10 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 71678199da2ea4bf55d6c5c43971fe8c
+      Hash: b48dbaa25b304d2a142471261b9f5dae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: EnemyHealth
+    className: RedEnemy
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -902,6 +953,12 @@ ScriptsOnlyBuild:
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
     className: Patrol
+  - hash:
+      serializedVersion: 2
+      Hash: 930b2a7c015542327cee6af349728cdd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -962,13 +1019,7 @@ ScriptsOnlyBuild:
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
     className: SingleNodeBlocker
-  - hash:
-      serializedVersion: 2
-      Hash: 5e2f762891c387724fd0b35a4bb4bd55
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnemySella
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/Ivan/Documents/Drive/Universit\xE0/Mobile Computing/Mobile-ICSB0.9.apk"
+  playerPath: "C:/Users/Ivan/Documents/Drive/Universit\xE0/Mobile Computing/Mobile-ICSB0.10.apk"
