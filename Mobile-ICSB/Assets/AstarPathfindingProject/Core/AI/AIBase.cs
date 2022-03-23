@@ -40,6 +40,8 @@ namespace Pathfinding {
 		/// <summary>\copydoc Pathfinding::IAstarAI::canMove</summary>
 		public bool canMove = true;
 
+
+
 		/// <summary>Max speed in world units per second</summary>
 		[UnityEngine.Serialization.FormerlySerializedAs("speed")]
 		public float maxSpeed = 1;
