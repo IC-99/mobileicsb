@@ -81,6 +81,8 @@ namespace Pathfinding {
 		[UnityEngine.Serialization.FormerlySerializedAs("turningSpeed")]
 		public float rotationSpeed = 360;
 
+		public float triggerD = 20;
+
 		/// <summary>Distance from the end of the path where the AI will start to slow down</summary>
 		public float slowdownDistance = 0.6F;
 
@@ -106,6 +108,8 @@ namespace Pathfinding {
 		/// When the end is within this distance then <see cref="OnTargetReached"/> will be called and <see cref="reachedEndOfPath"/> will return true.
 		/// </summary>
 		public float endReachedDistance = 0.2F;
+
+		public float SOs;
 
 		/// <summary>Draws detailed gizmos constantly in the scene view instead of only when the agent is selected and settings are being modified</summary>
 		public bool alwaysDrawGizmos;
@@ -268,6 +272,7 @@ namespace Pathfinding {
 		/// So when the agent is close to the destination this method will typically be called every <see cref="repathRate"/> seconds.
 		/// </summary>
 		public virtual void OnTargetReached () {
+
 		}
 
 		/// <summary>
@@ -321,6 +326,7 @@ namespace Pathfinding {
 			// Note that we need to do this here because otherwise the remainingDistance field might be incorrect for 1 frame.
 			// (due to interpolator.remainingDistance being incorrect).
 			interpolator.MoveToCircleIntersection2D(position, pickNextWaypointDist, movementPlane);
+
 
 			var distanceToEnd = remainingDistance;
 			if (distanceToEnd <= endReachedDistance) {
