@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\SoundManager\FootSteps.cs" />
+    <Compile Include="Assets\enemyAI.cs" />
     <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
     <Compile Include="Assets\Scripts\EnemySella.cs" />
     <Compile Include="Assets\Scripts\SparaNemico.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\RedEnemy.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
+    <Compile Include="Assets\BollaFiume.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
