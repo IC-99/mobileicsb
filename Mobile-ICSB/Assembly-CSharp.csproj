@@ -49,6 +49,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\Boss.cs" />
      <Compile Include="Assets\Scripts\ShootJoystick.cs" />
      <Compile Include="Assets\Scripts\PlayerPowerUp.cs" />
      <Compile Include="Assets\Scripts\Box.cs" />
@@ -57,15 +58,13 @@
      <Compile Include="Assets\Scripts\EnemyBullet.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\SoundManager\FootSteps.cs" />
-     <Compile Include="Assets\Scripts\EnemyAI.cs" />
+     <Compile Include="Assets\enemyAI.cs" />
      <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
      <Compile Include="Assets\Scripts\EnemySella.cs" />
      <Compile Include="Assets\Scripts\SparaNemico.cs" />
-     <Compile Include="Assets\Scripts\BossEnemy.cs" />
      <Compile Include="Assets\Scripts\PlayMusic.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
-     <Compile Include="Assets\BollaFiume.cs" />
      <Compile Include="Assets\Scripts\MoveJoystick.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
@@ -746,9 +745,19 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{474215B0-1284-6C5F-8D3A-7561EB0A38BE}</Project>
+      <Name>PackageToolsEditor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
       <Project>{E165543B-9EE2-53CD-AC2F-ED5F09C33EEE}</Project>
       <Name>AstarPathfindingProject</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{318A342D-989F-8498-F92B-9385FB1168A6}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
