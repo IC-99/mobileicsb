@@ -53,26 +53,30 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\ShootJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerPowerUp.cs" />
     <Compile Include="Assets\Scripts\Box.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\GivePunteggio.cs" />
+    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\SoundManager\FootSteps.cs" />
+    <Compile Include="Assets\enemyAI.cs" />
     <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
     <Compile Include="Assets\Scripts\EnemySella.cs" />
+    <Compile Include="Assets\Scripts\SparaNemico.cs" />
     <Compile Include="Assets\Scripts\PlayMusic.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
+    <Compile Include="Assets\BollaFiume.cs" />
     <Compile Include="Assets\Scripts\MoveJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\RedEnemy.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
-    <Compile Include="Assets\Scripts\SparaNemico.cs" />
-    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
