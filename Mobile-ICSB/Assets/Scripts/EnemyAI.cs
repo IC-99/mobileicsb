@@ -7,6 +7,8 @@ public class EnemyAI : MonoBehaviour
 {
 
     public Transform target;
+    public Transform GfxT;
+    public Rigidbody2D Gfx;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
 
@@ -18,6 +20,8 @@ public class EnemyAI : MonoBehaviour
 
     Seeker seeker;
     Rigidbody2D rb;
+    public bool canRotate;
+    public float rotationSpeed;
 
 
     // Start is called before the first frame update
@@ -52,6 +56,14 @@ public class EnemyAI : MonoBehaviour
     {
         if (path == null)
             return;
+
+        if (this.canRotate)
+        {
+            Vector2 direzioneRotazione = new Vector2(target.position.x, target.position.y) - (Vector2)this.Gfx.position;
+            direzioneRotazione = direzioneRotazione.normalized;
+            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, direzioneRotazione);
+            GfxT.rotation = Quaternion.RotateTowards(GfxT.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
 
         if (path.GetTotalLength() > aggroDistance)
             return;

@@ -60,7 +60,6 @@
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
      <Compile Include="Assets\Scripts\EnemySella.cs" />
-     <Compile Include="Assets\Scripts\SparaNemico.cs" />
      <Compile Include="Assets\Scripts\BossEnemy.cs" />
      <Compile Include="Assets\Scripts\PlayMusic.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />

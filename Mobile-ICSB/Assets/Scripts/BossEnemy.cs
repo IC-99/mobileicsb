@@ -25,6 +25,9 @@ public class BossEnemy : MonoBehaviour
     public int spinHealth;
     bool isSpinning = false;
 
+    public Transform firepointSingolo;
+    public Transform firepointMultiplo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -122,22 +125,39 @@ public class BossEnemy : MonoBehaviour
 
     void shootSingolo()
     {
-        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - this.rb.position;
+        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - (Vector2) this.firepointSingolo.position;
         this.direzioneSparo = Vector2.ClampMagnitude(this.direzioneSparo, 1f);
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, this.firepointSingolo.position, this.firepointSingolo.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(this.direzioneSparo * 0.5f, ForceMode2D.Impulse);
 
         //this.ShootSound.Play();
     }
 
+    private Vector2 rotate(Vector2 v, float delta)
+    {
+        return new Vector2(
+            v.x * Mathf.Cos(delta) - v.y * Mathf.Sin(delta),
+            v.x * Mathf.Sin(delta) + v.y * Mathf.Cos(delta)
+        );
+    }
+
     void shootMultiplo()
     {
-        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - this.rb.position;
+        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - (Vector2) this.firepointMultiplo.position;
         this.direzioneSparo = Vector2.ClampMagnitude(this.direzioneSparo, 1f);
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        
+        GameObject bullet = Instantiate(bulletPrefab, this.firepointMultiplo.position, this.firepointMultiplo.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(this.direzioneSparo * 0.5f, ForceMode2D.Impulse);
+        
+        GameObject bullet2 = Instantiate(bulletPrefab, this.firepointMultiplo.position, this.firepointMultiplo.rotation);
+        Rigidbody2D rb2 = bullet2.GetComponent<Rigidbody2D>();
+        rb2.AddForce(rotate(this.direzioneSparo,0.4f) * 0.5f, ForceMode2D.Impulse);
+        
+        GameObject bullet3 = Instantiate(bulletPrefab, this.firepointMultiplo.position, this.firepointMultiplo.rotation);
+        Rigidbody2D rb3 = bullet3.GetComponent<Rigidbody2D>();
+        rb3.AddForce(rotate(this.direzioneSparo, -0.4f) * 0.5f, ForceMode2D.Impulse);
 
         //this.ShootSound.Play();
     }
