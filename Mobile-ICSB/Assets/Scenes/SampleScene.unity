@@ -28672,11 +28672,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 2
+  version: 5
   radius: 0.65
   height: 2
-  repathRate: 0.5
-  canSearch: 1
   canMove: 1
   maxSpeed: 15
   gravity: {x: 0, y: 0, z: 0}
@@ -28684,16 +28682,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
+  repathRateCompatibility: NaN
+  canSearchCompability: 0
   orientation: 1
   enableRotation: 0
+  autoRepath:
+    mode: 0
+    interval: NaN
+    sensitivity: 10
+    maximumInterval: 2
+    visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  triggerD: 20
   slowdownDistance: 10
   pickNextWaypointDist: 2
   endReachedDistance: 10
-  SOs: 0
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
@@ -59630,11 +59634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 2
+  version: 5
   radius: 0.65
   height: 2
-  repathRate: 0.5
-  canSearch: 1
   canMove: 1
   maxSpeed: 15
   gravity: {x: 0, y: 0, z: 0}
@@ -59642,16 +59644,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
+  repathRateCompatibility: NaN
+  canSearchCompability: 0
   orientation: 1
   enableRotation: 0
+  autoRepath:
+    mode: 0
+    interval: NaN
+    sensitivity: 10
+    maximumInterval: 2
+    visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  triggerD: 20
   slowdownDistance: 10
   pickNextWaypointDist: 2
   endReachedDistance: 10
-  SOs: 0
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
@@ -78676,11 +78684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 2
+  version: 5
   radius: 0.65
   height: 2
-  repathRate: 0.5
-  canSearch: 1
   canMove: 1
   maxSpeed: 15
   gravity: {x: 0, y: 0, z: 0}
@@ -78688,16 +78694,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
+  repathRateCompatibility: NaN
+  canSearchCompability: 0
   orientation: 1
   enableRotation: 0
+  autoRepath:
+    mode: 0
+    interval: NaN
+    sensitivity: 10
+    maximumInterval: 2
+    visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  triggerD: 20
   slowdownDistance: 10
   pickNextWaypointDist: 2
   endReachedDistance: 10
-  SOs: 0
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
@@ -109774,7 +109786,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2138996490}
   - component: {fileID: 2138996493}
-  - component: {fileID: 2138996492}
   - component: {fileID: 2138996491}
   - component: {fileID: 2138996494}
   m_Layer: 0
@@ -109820,23 +109831,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2138996492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138996489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 489c32c1f3863014eb86a11bdfc0f844, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1231031637}
-  speed: 600
-  nextWaypointDistance: 3
-  aggroDistance: 50
-  minDistance: 10
 --- !u!114 &2138996493
 MonoBehaviour:
   m_ObjectHideFlags: 0
