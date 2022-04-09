@@ -17,6 +17,7 @@ public class BossEnemy : MonoBehaviour
     public GameObject bulletPrefab;
     protected bool isShooting = false;
     public Transform player;
+    public Transform GfxTransform;
     private Vector2 direzioneSparo;
     private bool isChanging = false;
     private int color = 0;
@@ -27,6 +28,7 @@ public class BossEnemy : MonoBehaviour
 
     public Transform firepointSingolo;
     public Transform firepointMultiplo;
+    private float damageOnCollison = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,6 @@ public class BossEnemy : MonoBehaviour
         this.currentHealth = maxHealth;
         this.healthBar.setMaxHealth(maxHealth);
         this.isDying = false;
-        this.rb = this.GetComponent<Rigidbody2D>();
         this.opacity = 1f;
         this.isShooting = false;
         InvokeRepeating("ChangeColor", 0.5f, 1f);
@@ -46,13 +47,16 @@ public class BossEnemy : MonoBehaviour
         if(this.currentHealth <= this.spinHealth && !isSpinning)
         {
             this.isSpinning = true;
-            this.enAI.minDistance = 0;
+            this.enAI.minDistance = 5;
             this.enAI.speed = 400;
+            this.enAI.canRotate = false;
             this.rb.constraints = RigidbodyConstraints2D.None;
-            this.rb.AddTorque(2000);
+           // this.rb.AddTorque(2000);
             this.sr.color = Color.red;
-
         }
+
+        if(isSpinning)
+            GfxTransform.Rotate(new Vector3(0, 0, 720 * Time.deltaTime));
 
         if (isDying)
         {
@@ -180,5 +184,10 @@ public class BossEnemy : MonoBehaviour
         //wait for some time
         yield return new WaitForSeconds(time);
         isShooting = false;
+    }
+
+    public float getDamage()
+    {
+        return this.damageOnCollison;
     }
 }

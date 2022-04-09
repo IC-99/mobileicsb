@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    //public Rigidbody2d rb;
 
     public HealthBar healthBar;
 
@@ -37,6 +38,10 @@ public class PlayerHealth : MonoBehaviour
             takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
         }
 
+        if (collision.collider.CompareTag("Boss"))
+        {
+            //takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
+        }
     }
 
     public void cura(int valoreCura)
