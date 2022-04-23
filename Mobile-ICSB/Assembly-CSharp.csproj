@@ -49,6 +49,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ShootJoystick.cs" />
      <Compile Include="Assets\Scripts\PlayerPowerUp.cs" />
      <Compile Include="Assets\Scripts\Box.cs" />
