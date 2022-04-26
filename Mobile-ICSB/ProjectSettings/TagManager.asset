@@ -10,6 +10,7 @@ TagManager:
   - PowerUpTriploProiettile
   - EnemyStella
   - EnemyBullet
+  - Boss
   layers:
   - Default
   - TransparentFX

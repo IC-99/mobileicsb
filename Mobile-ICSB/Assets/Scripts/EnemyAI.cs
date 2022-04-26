@@ -7,8 +7,9 @@ public class EnemyAI : MonoBehaviour
 {
 
     public Transform target;
-    public Transform GfxT;
-    public Rigidbody2D Gfx;
+    public Transform GfxTransform;
+    public Rigidbody2D GfxRB;
+    public Rigidbody2D CanvasRB;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
 
@@ -59,10 +60,10 @@ public class EnemyAI : MonoBehaviour
 
         if (this.canRotate)
         {
-            Vector2 direzioneRotazione = new Vector2(target.position.x, target.position.y) - (Vector2)this.Gfx.position;
+            Vector2 direzioneRotazione = new Vector2(target.position.x, target.position.y) - (Vector2)this.GfxRB.position;
             direzioneRotazione = direzioneRotazione.normalized;
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, direzioneRotazione);
-            GfxT.rotation = Quaternion.RotateTowards(GfxT.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            GfxTransform.rotation = Quaternion.RotateTowards(GfxTransform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
 
         if (path.GetTotalLength() > aggroDistance)
@@ -87,10 +88,13 @@ public class EnemyAI : MonoBehaviour
 
         rb.drag = 1;
 
+
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
         rb.AddForce(force);
+
+
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
         if(distance < nextWaypointDistance)
