@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public double  score;
+    public double score;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +25,10 @@ public class Score : MonoBehaviour
     public void addScore(double toAdd)
     {
         this.score += toAdd;
+    }
+
+    public double getScore()
+    {
+       return this.score;
     }
 }

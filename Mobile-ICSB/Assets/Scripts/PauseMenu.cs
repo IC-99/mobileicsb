@@ -20,6 +20,11 @@ public class PauseMenu : MonoBehaviour
         
     }
 
+    public void restart()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
     public void resume()
     {
         pauseMenu.SetActive(false);
