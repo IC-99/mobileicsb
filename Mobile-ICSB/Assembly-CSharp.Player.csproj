@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\LeaderboardInGameMenu.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ShootJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerPowerUp.cs" />
     <Compile Include="Assets\Scripts\Box.cs" />
@@ -64,6 +66,8 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\SoundManager\FootSteps.cs" />
     <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
+    <Compile Include="Assets\PlayfabManager.cs" />
+    <Compile Include="Assets\OptionMenu.cs" />
     <Compile Include="Assets\Scripts\EnemySella.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\SparaNemico.cs" />
@@ -292,6 +296,9 @@
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="PlayFabSDKEditor">
+      <HintPath>Library\ScriptAssemblies\PlayFabSDKEditor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -300,6 +307,9 @@
     </Reference>
     <Reference Include="PsdPlugin">
       <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayFabEditorExtensions">
+      <HintPath>Library\ScriptAssemblies\PlayFabEditorExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -717,6 +727,10 @@
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{B980238A-760D-929F-337F-FCA11E6C767C}</Project>
       <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="PlayFab.csproj">
+      <Project>{96BEB5E1-90AB-94D6-1133-234FCF1DD6FC}</Project>
+      <Name>PlayFab</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{EAB8D0A6-DD2F-BAE5-AFC0-C10756E52DB7}</Project>
