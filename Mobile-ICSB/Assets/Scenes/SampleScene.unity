@@ -19516,7 +19516,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 0c974345fa1182643974a3b56ec9c164, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -67422,6 +67422,10 @@ PrefabInstance:
       propertyPath: powerUpDannoAumentato
       value: 
       objectReference: {fileID: 4597963101486724178, guid: cf2c653849b7057498d87ef9080c145d, type: 3}
+    - target: {fileID: 7231818100332075662, guid: 506fd4d6764846b40a8f9bb872da1215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7231818100332075663, guid: 506fd4d6764846b40a8f9bb872da1215, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -75335,6 +75339,10 @@ PrefabInstance:
       propertyPath: powerUpDannoAumentato
       value: 
       objectReference: {fileID: 4597963101486724178, guid: cf2c653849b7057498d87ef9080c145d, type: 3}
+    - target: {fileID: 7231818100332075662, guid: 506fd4d6764846b40a8f9bb872da1215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7231818100332075663, guid: 506fd4d6764846b40a8f9bb872da1215, type: 3}
       propertyPath: m_RootOrder
       value: 14
