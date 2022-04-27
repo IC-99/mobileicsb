@@ -49,8 +49,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\LeaderboardInGameMenu.cs" />
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ShootJoystick.cs" />
+     <Compile Include="Assets\LeaderBoardController.cs" />
      <Compile Include="Assets\Scripts\PlayerPowerUp.cs" />
      <Compile Include="Assets\Scripts\Box.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
@@ -59,6 +61,8 @@
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\SoundManager\FootSteps.cs" />
      <Compile Include="Assets\Scripts\ShootJoystickIsUsing.cs" />
+     <Compile Include="Assets\PlayfabManager.cs" />
+     <Compile Include="Assets\OptionMenu.cs" />
      <Compile Include="Assets\Scripts\EnemySella.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\SparaNemico.cs" />
@@ -309,6 +313,9 @@
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>C:/Users/stepo/Documents/GitHub/mobileicsb/Mobile-ICSB/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/stepo/Documents/GitHub/mobileicsb/Mobile-ICSB/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -747,9 +754,29 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PlayFabSDKEditor.csproj">
+      <Project>{02980D6B-31D9-E046-DE5D-EBAA5D70D7E0}</Project>
+      <Name>PlayFabSDKEditor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="PlayFabEditorExtensions.csproj">
+      <Project>{D89811AF-6A35-608D-3E3B-82E4DC4511DC}</Project>
+      <Name>PlayFabEditorExtensions</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="lootlocker.lootlockersdk.runtime.csproj">
+      <Project>{FDC9AD8C-420E-EA05-8B2D-910D0B9C1EC2}</Project>
+      <Name>lootlocker.lootlockersdk.runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="PackageToolsEditor.csproj">
       <Project>{474215B0-1284-6C5F-8D3A-7561EB0A38BE}</Project>
       <Name>PackageToolsEditor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="PlayFab.csproj">
+      <Project>{96BEB5E1-90AB-94D6-1133-234FCF1DD6FC}</Project>
+      <Name>PlayFab</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">

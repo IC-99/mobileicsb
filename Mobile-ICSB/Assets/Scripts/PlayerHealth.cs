@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    public GameObject deathScreen;
     //public Rigidbody2d rb;
 
     public HealthBar healthBar;
@@ -23,7 +24,11 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.currentHealth <= 0) SceneManager.LoadScene("SampleScene");
+        if (this.currentHealth <= 0)
+        {
+            Time.timeScale = 0f;
+            this.deathScreen.SetActive(true);
+        };
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
