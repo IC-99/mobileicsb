@@ -19,6 +19,9 @@ public class RedEnemy : MonoBehaviour
     public Transform player;
     private Vector2 direzioneSparo;
 
+    public Score score;
+    public Fragment frammento;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +74,8 @@ public class RedEnemy : MonoBehaviour
         this.healtBarUI.SetActive(false);
         this.GetComponent<Collider2D>().enabled = false;
         this.isDying = true;
+        Instantiate(frammento, transform.position, Quaternion.identity);
+        score.addFragment(2);
         Destroy(gameObject, 1f);
     }
 
