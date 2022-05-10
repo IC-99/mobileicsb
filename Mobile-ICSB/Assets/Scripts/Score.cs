@@ -5,10 +5,12 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public double score;
+    public int frammenti;
 
     // Start is called before the first frame update
     void Start()
     {
+        frammenti = 0;
         InvokeRepeating("updateScore", 0, 1.0f);
     }
 
@@ -30,5 +32,15 @@ public class Score : MonoBehaviour
     public double getScore()
     {
        return this.score;
+    }
+
+    public void addFragment(int amount)
+    {
+        this.frammenti += amount;
+    }
+
+    public int getFrammenti()
+    {
+        return this.frammenti;
     }
 }

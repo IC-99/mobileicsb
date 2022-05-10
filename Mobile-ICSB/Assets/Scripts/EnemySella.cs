@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemySella : MonoBehaviour
 {
 
+    public Score score;
+    public Fragment frammento;
     private bool isDying = false;
     public Transform target;
     public Rigidbody2D rb;
@@ -74,6 +76,8 @@ public class EnemySella : MonoBehaviour
     {
         this.GetComponent<Collider2D>().enabled = false;
         this.isDying = true;
+        Instantiate(frammento, transform.position, Quaternion.identity);
+        score.addFragment(1);
         Destroy(gameObject, 1f);
     }
 }

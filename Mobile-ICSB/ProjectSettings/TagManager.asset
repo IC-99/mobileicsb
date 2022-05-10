@@ -11,6 +11,7 @@ TagManager:
   - EnemyStella
   - EnemyBullet
   - Boss
+  - Frammento
   layers:
   - Default
   - TransparentFX
