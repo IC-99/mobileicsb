@@ -8,6 +8,9 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public GameObject deathScreen;
+    private bool hasHelmet;
+    public SpriteRenderer player;
+    public Sprite playerConElmo;
     //public Rigidbody2d rb;
 
     public HealthBar healthBar;
@@ -45,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.collider.CompareTag("Boss"))
         {
-            //takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
+            takeDamage(collision.collider.GetComponent<BossEnemy>().getDamage());
         }
     }
 
@@ -64,7 +67,24 @@ public class PlayerHealth : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        this.currentHealth -= damage;
+        float protezione = 1f;
+        if (hasHelmet)
+        {
+            protezione = 0.5f;
+        }
+        this.currentHealth -= (int)(damage * protezione);
         this.healthBar.setHealth(currentHealth);
     }
+
+    public bool getHasHelmet()
+    {
+        return hasHelmet;
+    }
+
+    public void setHelmet()
+    {
+        hasHelmet = true;
+        player.sprite = playerConElmo;
+    }
+
 }

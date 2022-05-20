@@ -27,6 +27,8 @@ public class MoveJoystick : MonoBehaviour
         isUsing = FindObjectOfType<MoveJoystickIsUsing>();
 
     }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -50,8 +52,6 @@ public class MoveJoystick : MonoBehaviour
                 inuso = true;
             }
         }
-
-
 
         if (isUsing.Pressed)
         {

@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\FragmentCountText.cs" />
     <Compile Include="Assets\LeaderboardInGameMenu.cs" />
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ShootJoystick.cs" />
@@ -72,18 +73,18 @@
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\SparaNemico.cs" />
     <Compile Include="Assets\Scripts\BossEnemy.cs" />
+    <Compile Include="Assets\Scripts\Fragment.cs" />
     <Compile Include="Assets\Scripts\PlayMusic.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
-    <Compile Include="Assets\BollaFiume.cs" />
+    <Compile Include="Assets\Scripts\BollaFiume.cs" />
     <Compile Include="Assets\Scripts\MoveJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\RedEnemy.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
-    <Compile Include="Assets\Fragment.cs" />
-    <Compile Include="Assets\FragmentCountText.cs" />
+    <Compile Include="Assets\Scripts\Market.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

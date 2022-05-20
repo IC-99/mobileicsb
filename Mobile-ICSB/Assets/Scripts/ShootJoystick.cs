@@ -32,11 +32,13 @@ public class ShootJoystick : MonoBehaviour
 
     public AudioSource ShootSound;
 
+    private bool isFreq;
+
 
     void Start()
     {
         isUsing = FindObjectOfType<ShootJoystickIsUsing>();
-
+        isFreq = false;
     }
     // Update is called once per frame
     void Update()
@@ -179,7 +181,17 @@ public class ShootJoystick : MonoBehaviour
         
     }
 
-    
+    public bool getIsFreq()
+    {
+        return isFreq;
+    }
+
+    public void setIsFreq()
+    {
+        isFreq = true;
+        frequency = 0.2f;
+        
+    }
 
 
 }

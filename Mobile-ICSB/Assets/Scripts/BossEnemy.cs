@@ -28,7 +28,7 @@ public class BossEnemy : MonoBehaviour
 
     public Transform firepointSingolo;
     public Transform firepointMultiplo;
-    private float damageOnCollison = 0.1f;
+    private int damageOnCollison = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -186,8 +186,10 @@ public class BossEnemy : MonoBehaviour
         isShooting = false;
     }
 
-    public float getDamage()
+    public int getDamage()
     {
         return this.damageOnCollison;
     }
+
+
 }
