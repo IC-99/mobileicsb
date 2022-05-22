@@ -10,6 +10,7 @@ public class Box : MonoBehaviour
     public GameObject powerUpDannoAumentato;
     public GameObject powerUpCura;
     public GameObject powerUpTriploProiettile;
+    public Score score;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class Box : MonoBehaviour
                 Instantiate(this.powerUps[this.estrazioneCasuale(this.powerUps.Length)], transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 Destroy(effect, 2f);
+                this.score.addScore(50);
             }
         }
     }

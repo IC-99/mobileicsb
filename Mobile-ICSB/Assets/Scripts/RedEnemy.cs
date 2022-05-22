@@ -77,6 +77,7 @@ public class RedEnemy : MonoBehaviour
         Instantiate(frammento, transform.position, Quaternion.identity);
         score.addFragment(2);
         Destroy(gameObject, 1f);
+        this.score.addScore(50);
     }
 
 
