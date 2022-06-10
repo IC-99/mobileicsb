@@ -112,9 +112,13 @@ public class BossEnemy : MonoBehaviour
         {
             takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
         if (collision.collider.CompareTag("Player"))
         {
-            this.playerHealth.takeDamage(1);
+            this.playerHealth.takeDamage(4 * Time.deltaTime);
         }
     }
 
