@@ -14,6 +14,7 @@ public class Market : MonoBehaviour
     public Text TestoBottoneCompraFreq;
     public PlayerHealth player;
     public ShootJoystick shooting;
+    public Score score;
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +25,7 @@ public class Market : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.getHasHelmet())
-        {
-            coloreBottoneCompraElmo.color = Color.green;
-            TestoBottoneCompraElmo.text = "LO POSSIEDI GIÀ";
-        }
-        if (shooting.getIsFreq())
-        {
-            coloreBottoneCompraFreq.color = Color.green;
-            TestoBottoneCompraFreq.text = "LO POSSIEDI GIÀ";
-        }
+        
     }
 
     private void OnMouseOver()
@@ -53,14 +45,24 @@ public class Market : MonoBehaviour
 
     public void compraElmo()
     {
-        //TODO togli soldi
-        player.setHelmet();
+        if (score.getFrammenti() >= 6)
+        {
+            score.reduceFragment(6);
+            player.setHelmet();
+            coloreBottoneCompraElmo.color = Color.green;
+            TestoBottoneCompraElmo.text = "LO POSSIEDI GIÀ";
+        }
     }
 
     public void compraFreq()
     {
-        //TODO togli soldi
-        shooting.setIsFreq();
+        if (score.getFrammenti() >= 5)
+        {
+            score.reduceFragment(5);
+            shooting.setIsFreq();
+            coloreBottoneCompraFreq.color = Color.green;
+            TestoBottoneCompraFreq.text = "LO POSSIEDI GIÀ";
+        }
     }
 
 

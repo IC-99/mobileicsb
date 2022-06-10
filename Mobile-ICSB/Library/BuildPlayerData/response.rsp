@@ -4,6 +4,7 @@
 -a="C:\Users\Ivan\Documents\GitHub\mobileicsb\Mobile-ICSB\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
 -a="C:\Users\Ivan\Documents\GitHub\mobileicsb\Mobile-ICSB\Library\PlayerScriptAssemblies\Unity.Timeline.dll"
 -a="C:\Users\Ivan\Documents\GitHub\mobileicsb\Mobile-ICSB\Library\PlayerScriptAssemblies\Unity.TextMeshPro.dll"
+-a="C:\Users\Ivan\Documents\GitHub\mobileicsb\Mobile-ICSB\Library\PlayerScriptAssemblies\PlayFab.dll"
 -a="C:\Users\Ivan\Documents\GitHub\mobileicsb\Mobile-ICSB\Library\PlayerScriptAssemblies\UnityEngine.UI.dll"
 -a="C:\Users\Ivan\Documents\GitHub\mobileicsb\Mobile-ICSB\Library\PlayerScriptAssemblies\Unity.Mathematics.dll"
 -a="C:\Users\Ivan\Documents\GitHub\mobileicsb\Mobile-ICSB\Library\PlayerScriptAssemblies\Unity.2D.IK.Runtime.dll"
