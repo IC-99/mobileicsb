@@ -43,4 +43,9 @@ public class Score : MonoBehaviour
     {
         return this.frammenti;
     }
+
+    public void reduceFragment(int amount)
+    {
+        this.frammenti -= amount;
+    }
 }
