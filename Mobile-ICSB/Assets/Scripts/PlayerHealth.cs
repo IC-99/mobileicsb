@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    public float currentHealth;
+    public int maxHealth = 100;
+    public int currentHealth;
     public GameObject deathScreen;
     private bool hasHelmet;
     public SpriteRenderer player;
@@ -19,9 +19,9 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         //currentHealth = maxHealth;
-        this.healthBar.setMaxHealth((int)this.maxHealth);
-        this.currentHealth = 100f;
-        this.healthBar.setHealth((int)currentHealth);
+        this.healthBar.setMaxHealth(this.maxHealth);
+        this.currentHealth = 100;
+        this.healthBar.setHealth(currentHealth);
     }
 
     // Update is called once per frame
@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
         {
             this.currentHealth += valoreCura;
         }
-        this.healthBar.setHealth((int)currentHealth);
+        this.healthBar.setHealth(currentHealth);
     }
 
     public void takeDamage(int damage)
@@ -72,19 +72,8 @@ public class PlayerHealth : MonoBehaviour
         {
             protezione = 0.5f;
         }
-        this.currentHealth -= (damage * protezione);
-        this.healthBar.setHealth((int)currentHealth);
-    }
-
-    public void takeDamage(float damage)
-    {
-        float protezione = 1f;
-        if (hasHelmet)
-        {
-            protezione = 0.5f;
-        }
-        this.currentHealth -= (damage * protezione);
-        this.healthBar.setHealth((int)currentHealth);
+        this.currentHealth -= (int)(damage * protezione);
+        this.healthBar.setHealth(currentHealth);
     }
 
     public bool getHasHelmet()

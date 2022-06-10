@@ -70,15 +70,12 @@
      <Compile Include="Assets\Scripts\Fragment.cs" />
      <Compile Include="Assets\Scripts\PlayMusic.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\TriggerNemici.cs" />
      <Compile Include="Assets\Scripts\MoveJoystickIsUsing.cs" />
      <Compile Include="Assets\Scripts\BollaFiume.cs" />
      <Compile Include="Assets\Scripts\MoveJoystick.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-     <Compile Include="Assets\ScoreDisplay.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\RedEnemy.cs" />
-     <Compile Include="Assets\End.cs" />
      <Compile Include="Assets\Scripts\Market.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\EnemyGFX.cs" />
