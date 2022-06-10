@@ -29,6 +29,9 @@ public class BossEnemy : MonoBehaviour
     public Transform firepointSingolo;
     public Transform firepointMultiplo;
     private int damageOnCollison = 5;
+    public PlayerHealth playerHealth;
+    public Score score;
+    public GameObject VictoryObject;
 
     // Start is called before the first frame update
     void Start()
@@ -78,7 +81,7 @@ public class BossEnemy : MonoBehaviour
             this.timer += 1;
             if (this.timer == 3)
             {
-                this.timer = -3;
+                this.timer = 0;
                 this.isChanging = true;
                 if (this.color == 0) this.color = 1;
                 else this.color = 0;
@@ -109,6 +112,10 @@ public class BossEnemy : MonoBehaviour
         {
             takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
         }
+        if (collision.collider.CompareTag("Player"))
+        {
+            this.playerHealth.takeDamage(1);
+        }
     }
 
     private void takeDamage(int damage)
@@ -124,6 +131,8 @@ public class BossEnemy : MonoBehaviour
         this.GetComponent<Collider2D>().enabled = false;
         this.isDying = true;
         Destroy(gameObject, 1f);
+        this.VictoryObject.SetActive(true);
+        this.score.addScore(200);
     }
 
 
