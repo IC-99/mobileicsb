@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public GameObject hitEffect;
-    public int damage = 20;
+    public int damage = 15;
 
     public Rigidbody2D rb;
 

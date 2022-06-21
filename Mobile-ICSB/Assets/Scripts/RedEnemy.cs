@@ -66,7 +66,7 @@ public class RedEnemy : MonoBehaviour
     {
         this.currentHealth -= damage;
         this.healthBar.setHealth(currentHealth);
-        if(this.currentHealth <= 0) death();
+        if (this.currentHealth <= 0) death();
     }
 
     private void death()
@@ -87,7 +87,7 @@ public class RedEnemy : MonoBehaviour
         this.direzioneSparo = Vector2.ClampMagnitude(this.direzioneSparo, 1f);
         GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(this.direzioneSparo * 0.5f, ForceMode2D.Impulse);
+        rb.AddForce(this.direzioneSparo * 0.3f, ForceMode2D.Impulse);
 
         //this.ShootSound.Play();
     }

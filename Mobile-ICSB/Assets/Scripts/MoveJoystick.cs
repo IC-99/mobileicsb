@@ -7,7 +7,7 @@ public class MoveJoystick : MonoBehaviour
     public MoveJoystickIsUsing isUsing;
 
     public Transform player;
-    public float speed = 200.0f;
+    public float speed = 215.0f;
     private bool touchStart = false;
 
     private Vector3 pointA;

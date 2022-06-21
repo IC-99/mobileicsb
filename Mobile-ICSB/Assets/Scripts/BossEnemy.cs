@@ -47,18 +47,18 @@ public class BossEnemy : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if(this.currentHealth <= this.spinHealth && !isSpinning)
+        if (this.currentHealth <= this.spinHealth && !isSpinning)
         {
             this.isSpinning = true;
             this.enAI.minDistance = 5;
-            this.enAI.speed = 400;
+            this.enAI.speed = 4000;
             this.enAI.canRotate = false;
             this.rb.constraints = RigidbodyConstraints2D.None;
-           // this.rb.AddTorque(2000);
+            // this.rb.AddTorque(2000);
             this.sr.color = Color.red;
         }
 
-        if(isSpinning)
+        if (isSpinning)
             GfxTransform.Rotate(new Vector3(0, 0, 720 * Time.deltaTime));
 
         if (isDying)
@@ -95,7 +95,7 @@ public class BossEnemy : MonoBehaviour
         }
     }
 
-    void animazioneCambiaColore() 
+    void animazioneCambiaColore()
     {
         if (this.color == 0) sr.color = Color.blue;
         else sr.color = Color.white;
@@ -112,9 +112,14 @@ public class BossEnemy : MonoBehaviour
         {
             takeDamage(collision.collider.GetComponent<EnemySella>().getDamage());
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
         if (collision.collider.CompareTag("Player"))
         {
             this.playerHealth.takeDamage(1);
+            this.playerHealth.takeDamage(2 * Time.deltaTime);
         }
     }
 
@@ -138,7 +143,7 @@ public class BossEnemy : MonoBehaviour
 
     void shootSingolo()
     {
-        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - (Vector2) this.firepointSingolo.position;
+        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - (Vector2)this.firepointSingolo.position;
         this.direzioneSparo = Vector2.ClampMagnitude(this.direzioneSparo, 1f);
         GameObject bullet = Instantiate(bulletPrefab, this.firepointSingolo.position, this.firepointSingolo.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -157,17 +162,17 @@ public class BossEnemy : MonoBehaviour
 
     void shootMultiplo()
     {
-        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - (Vector2) this.firepointMultiplo.position;
+        this.direzioneSparo = new Vector2(player.position.x, player.position.y) - (Vector2)this.firepointMultiplo.position;
         this.direzioneSparo = Vector2.ClampMagnitude(this.direzioneSparo, 1f);
-        
+
         GameObject bullet = Instantiate(bulletPrefab, this.firepointMultiplo.position, this.firepointMultiplo.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(this.direzioneSparo * 0.5f, ForceMode2D.Impulse);
-        
+
         GameObject bullet2 = Instantiate(bulletPrefab, this.firepointMultiplo.position, this.firepointMultiplo.rotation);
         Rigidbody2D rb2 = bullet2.GetComponent<Rigidbody2D>();
-        rb2.AddForce(rotate(this.direzioneSparo,0.4f) * 0.5f, ForceMode2D.Impulse);
-        
+        rb2.AddForce(rotate(this.direzioneSparo, 0.4f) * 0.5f, ForceMode2D.Impulse);
+
         GameObject bullet3 = Instantiate(bulletPrefab, this.firepointMultiplo.position, this.firepointMultiplo.rotation);
         Rigidbody2D rb3 = bullet3.GetComponent<Rigidbody2D>();
         rb3.AddForce(rotate(this.direzioneSparo, -0.4f) * 0.5f, ForceMode2D.Impulse);
