@@ -11,6 +11,8 @@ public class Box : MonoBehaviour
     public GameObject powerUpCura;
     public GameObject powerUpTriploProiettile;
     public Score score;
+    public AudioSource hitSound;
+    public AudioSource brokeSound;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +35,19 @@ public class Box : MonoBehaviour
         if(collision.collider.CompareTag("Bullet"))
         {
             state--;
-            if(state == 2) gameObject.GetComponent<Animator>().Play("DamageBox");
-            if(state == 1) gameObject.GetComponent<Animator>().Play("MoreDamageBox");
+            if (state == 2)
+            {
+                this.hitSound.Play();
+                gameObject.GetComponent<Animator>().Play("DamageBox");
+            }
+            if (state == 1)
+            {
+                this.hitSound.Play();
+                gameObject.GetComponent<Animator>().Play("MoreDamageBox");
+            }
             if(state == 0)
             {
+                this.brokeSound.Play();
                 GameObject effect = Instantiate(boxExplosion, transform.position, Quaternion.identity);
                 Instantiate(this.powerUps[this.estrazioneCasuale(this.powerUps.Length)], transform.position, Quaternion.identity);
                 Destroy(gameObject);

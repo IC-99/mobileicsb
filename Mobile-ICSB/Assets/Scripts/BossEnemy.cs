@@ -53,7 +53,6 @@ public class BossEnemy : MonoBehaviour
             this.enAI.minDistance = 5;
             this.enAI.speed = 4000;
             this.enAI.canRotate = false;
-            this.rb.constraints = RigidbodyConstraints2D.None;
             // this.rb.AddTorque(2000);
             this.sr.color = Color.red;
         }

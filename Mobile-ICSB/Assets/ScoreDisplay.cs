@@ -18,6 +18,6 @@ public class ScoreDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        t.text = this.score.getScore().ToString();
+        t.text = "PUNTEGGIO: " + this.score.getScore().ToString();
     }
 }
