@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     private bool hasHelmet;
     public SpriteRenderer player;
     public Sprite playerConElmo;
+    public AudioSource colpito;
     //public Rigidbody2d rb;
 
     public HealthBar healthBar;
@@ -74,6 +75,7 @@ public class PlayerHealth : MonoBehaviour
         }
         this.currentHealth -= (damage * protezione);
         this.healthBar.setHealth((int)currentHealth);
+        this.colpito.Play();
     }
 
     public void takeDamage(float damage)

@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public GameObject hitEffect;
-    public int damage = 15;
+    public int damage = 18;
+    public AudioSource sound;
 
     public Rigidbody2D rb;
 
@@ -15,6 +16,7 @@ public class EnemyBullet : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 1.2f);
+        this.sound.Play();
     }
 
     private void FixedUpdate()

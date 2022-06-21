@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BACK
+  m_text: MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -869,8 +869,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3770728640
-  m_fontColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 0.8784314}
+    rgba: 3774873599
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.8784314}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1242,7 +1242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Nome
 --- !u!222 &378703135
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1779,8 +1779,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3770794433
-  m_fontColor: {r: 0.75686276, g: 0.75686276, b: 0.75686276, a: 0.8784314}
+    rgba: 3774873599
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.8784314}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2354,7 +2354,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Get the updated leaderboard
+  m_Text: Aggiorna leaderboard
 --- !u!222 &806772489
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3621,8 +3621,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3770794433
-  m_fontColor: {r: 0.75686276, g: 0.75686276, b: 0.75686276, a: 0.8784314}
+    rgba: 3774873599
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.8784314}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4641,8 +4641,8 @@ AudioSource:
   m_GameObject: {fileID: 1577291705}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 07554908fd58f38499b6a17fa370ee97, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e0c2d8f7bfb83ea48a3ad1dfcf686217, type: 2}
+  m_audioClip: {fileID: 8300000, guid: e7e3e5a0b62a88f48aa07188558f7c76, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -5004,8 +5004,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3770794433
-  m_fontColor: {r: 0.75686276, g: 0.75686276, b: 0.75686276, a: 0.8784314}
+    rgba: 3774873599
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.8784314}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5466,7 +5466,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BACK
+  m_Text: MENU
 --- !u!222 &1720641269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5702,8 +5702,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 172, y: -0.000030517578}
-  m_SizeDelta: {x: 160, y: 60}
+  m_AnchoredPosition: {x: 217.229, y: -0.000030517578}
+  m_SizeDelta: {x: 250.4581, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880434544
 MonoBehaviour:
@@ -5738,7 +5738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: Punteggio
 --- !u!222 &1880434545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5781,8 +5781,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -374, y: -0.000030517578}
-  m_SizeDelta: {x: 160, y: 60}
+  m_AnchoredPosition: {x: -378.61523, y: -0.000030517578}
+  m_SizeDelta: {x: 169.2304, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104180715
 MonoBehaviour:
@@ -5817,7 +5817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Place
+  m_Text: Posizione
 --- !u!222 &2104180716
 CanvasRenderer:
   m_ObjectHideFlags: 0

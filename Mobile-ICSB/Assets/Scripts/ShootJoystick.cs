@@ -26,7 +26,7 @@ public class ShootJoystick : MonoBehaviour
     public bool inuso = false;
     public Touch touch;
 
-    public float frequency = 0.4f;
+    public float frequency = 0.2f;
 
     public PlayerPowerUp powerUps;
 
@@ -90,7 +90,7 @@ public class ShootJoystick : MonoBehaviour
         {
             if (!isShooting)
             {
-                StartCoroutine(shooting(frequency));
+                StartCoroutine(shooting(this.frequency));
             }
 
         }
@@ -189,7 +189,7 @@ public class ShootJoystick : MonoBehaviour
     public void setIsFreq()
     {
         isFreq = true;
-        frequency = 0.2f;
+        frequency = 0.15f;
         
     }
 

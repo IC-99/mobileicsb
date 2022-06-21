@@ -66,7 +66,7 @@ public class PlayerPowerUp : MonoBehaviour
         {
             this.triploProiettile = true;
             this.triploProiettileTimer.startTimer(10f, "TriploProiettile");
-            //this.triploProiettileSound.Play();
+            this.dannoAumentatoSound.Play();
             Destroy(collision.gameObject);
         }
     }
