@@ -66,7 +66,10 @@
     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\GridLookup.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\AstarPath.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\BBTree.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AutoRepathPolicy.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarChecksum.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\EuclideanEmbedding.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Modifiers\SimpleSmoothModifier.cs" />
@@ -104,7 +107,10 @@
     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\PathProcessor.cs" />
     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\AstarSmoothFollow2.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AstarDebugger.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\SnapToNode.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\AstarPathfindingProject\Legacy\MiscLegacy.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\MovementUtilities.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\NodeLink.cs" />
